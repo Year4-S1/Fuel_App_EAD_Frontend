@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialogshape"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Join Queue"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:textSize="18dp"
+        android:textColor="@color/topGreen"
+        android:fontFamily="@font/robotobold"
+
+        />
+
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="10dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select fuel"
+        android:gravity="center"
+        android:textSize="15dp"
+        android:textColor="@color/placeHolderGrey"
+        android:fontFamily="@font/robotoregular"
+
+        />
+
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <RadioGroup
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/petroltypes"
+        android:orientation="horizontal"
+
+        >
+
+        <RadioButton
+            android:id="@+id/p92"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Petrol 92 Octane"
+            android:checked="true"
+            android:onClick="clearDeisel"
+            android:fontFamily="@font/robotoregular"
+            android:textSize="13dp"/>
+        <RadioButton
+            android:id="@+id/p95"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Petrol 95 Octane"
+            android:onClick="clearDeisel"
+            android:fontFamily="@font/robotoregular"
+            android:textSize="13dp"/>/>
+
+    </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/dieselTypes"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/diesel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/robotoregular"
+                android:onClick="clearPetrol"
+                android:text="Diesel"
+                android:textSize="13dp" />
+
+            <Space
+                android:layout_width="62dp"
+                android:layout_height="1dp" />
+
+            <RadioButton
+                android:id="@+id/sdiesel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/robotoregular"
+                android:onClick="clearPetrol"
+                android:text="Super Diesel"
+                android:textSize="13dp" />
+        </RadioGroup>
+
+    </LinearLayout>
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="20dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Vehicle type"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:textColor="@color/placeHolderGrey"
+            android:fontFamily="@font/robotoregular"
+
+            />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <RadioGroup
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/vehicletypes"
+            android:orientation="horizontal"
+
+            >
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Car"
+                android:checked="true"
+                android:onClick="clearDeisel"
+                android:fontFamily="@font/robotoregular"
+                android:textSize="13dp"
+                android:id="@+id/car"/>
+            <Space
+                android:layout_width="13dp"
+                android:layout_height="1dp"/>
+            <RadioButton
+                android:id="@+id/bikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Motor cycle"
+                android:onClick="clearDeisel"
+                android:fontFamily="@font/robotoregular"
+                android:textSize="13dp"/>
+            <Space
+                android:layout_width="13dp"
+                android:layout_height="1dp"/>
+            <RadioButton
+                android:id="@+id/tuk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Three-wheelers"
+                android:onClick="clearDeisel"
+                android:fontFamily="@font/robotoregular"
+                android:textSize="13dp"/>
+
+        </RadioGroup>
+        <RadioGroup
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/vehicletypes1"
+            android:orientation="horizontal"
+
+            >
+            <RadioButton
+                android:id="@+id/van"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Van"
+                android:onClick="clearPetrol"
+                android:fontFamily="@font/robotoregular"
+                android:textSize="13dp"/>
+            <Space
+                android:layout_width="64dp"
+                android:layout_height="1dp"/>
+
+
+            <RadioButton
+                android:id="@+id/lorry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorry"
+                android:onClick="clearPetrol"
+                android:fontFamily="@font/robotoregular"
+                android:textSize="13dp"
+                />
+            <Space
+                android:layout_width="64dp"
+                android:layout_height="1dp"/>
+            <RadioButton
+            android:id="@+id/bus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bus"
+            android:onClick="clearPetrol"
+            android:fontFamily="@font/robotoregular"
+            android:textSize="13dp"
+            />
+        </RadioGroup>
+
+    </LinearLayout>
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="20dp"/>
+
+    <TextView
+        android:id="@+id/joinQueueBtn"
+        android:layout_width="158dp"
+        android:layout_height="56dp"
+        android:background="@drawable/btn_dark"
+        android:text="Join Queue"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:fontFamily="@font/robotobold"
+        android:textColor="@color/white"
+        android:textSize="20dp"/>
+
+
+
+</LinearLayout>

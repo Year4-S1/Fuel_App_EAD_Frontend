@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">EAD_Assignment</string>
+    <string name="searchHint"><font size="13"> Search station, location</font></string>
+    <string name="search_query"></string>
+    <string name="stationName"><u>Lumbini Enterprises</u></string>
+    <string name="selectedFuel"></string>
+
+</resources>
