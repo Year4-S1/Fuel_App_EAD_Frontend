@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/drawable-anydpi/ic_down.xml" value="0.307" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/drawable-xhdpi/btn_dark_small.xml" value="0.2165" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/drawable-xhdpi/btn_light.xml" value="0.2165" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/drawable-xhdpi/ic_baseline_search_24.xml" value="0.3325" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/drawable-xhdpi/search.xml" value="0.298" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/drawable-xhdpi/style_spinner.xml" value="0.178" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/drawable/btn_dark.xml" value="0.2" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/drawable/custom_form.xml" value="0.1" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/drawable/dialogshape.xml" value="0.2675" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.2715" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/drawable/search.xml" value="0.195" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/drawable/search_form.xml" value="0.298" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/drawable/shape_dialog_bg.xml" value="0.133" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/drawable/shed_card.xml" value="0.312" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/drawable/style_spinner.xml" value="0.22" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/activity_register_station.xml" value="0.1405775075987842" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/home.xml" value="0.67" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/join_dialog.xml" value="0.22" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/join_queue_dialog.xml" value="0.22" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/leave_queue.xml" value="0.33" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/login.xml" value="0.1" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/login1.xml" value="0.1" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/logout.xml" value="0.27291666666666664" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/owner_home.xml" value="0.25925925925925924" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/register_station.xml" value="0.1474164133738602" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/search_results.xml" value="0.1" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/selected_fuel.xml" value="0.25" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/shed_card.xml" value="0.22" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/shed_card1.xml" value="0.33" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/signup.xml" value="0.1" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/signup1.xml" value="0.1" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/station_info.xml" value="0.1" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/station_info1.xml" value="0.67" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/style_elements.xml" value="0.38697916666666665" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/update_fuel_status.xml" value="0.209375" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/xml/network_security_config.xml" value="0.13229166666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home"
+    android:orientation="vertical"
+    android:background="@drawable/bg2"
+    android:gravity="center_horizontal"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+
+    >
+
+    <LinearLayout
+        android:layout_width="351dp"
+        android:layout_height="wrap_content"
+
+        >
+
+        <TextView
+            android:layout_width="249dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/robotobold"
+            android:gravity="left"
+            android:maxLines="1"
+            android:text="Search Results"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+
+
+        <ImageView
+            android:layout_width="104dp"
+            android:layout_height="88dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"
+            card_view:srcCompat="@drawable/shed"
+            android:paddingLeft="20dp"
+            android:layout_marginRight="-15dp"
+            />
+
+    </LinearLayout>
+
+
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="30dp"/>
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="48dp" android:orientation="horizontal"
+        android:background="@drawable/search"
+        android:elevation="5dp"
+        android:alpha=".82"
+        >
+
+        <ImageButton
+            android:id="@+id/searchicon"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:background="@color/formGrey"
+            android:src="@drawable/ic_baseline_search_24"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            />
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="230dp"
+            android:layout_height="48dp"
+
+            android:hint="@string/searchHint"
+            android:textColor="@color/black"
+            android:text="@string/search_query"
+            android:background="@drawable/search_form"
+            />
+
+    </LinearLayout>
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/search"-->
+    <!--        android:layout_width="300dp"-->
+    <!--        android:layout_height="48dp"-->
+    <!--        android:alpha=".82"-->
+    <!--        android:background="@drawable/search"-->
+    <!--        android:elevation="5dp"-->
+    <!--        android:hint="@string/searchHint"-->
+    <!--        android:paddingLeft="30dp"-->
+    <!--        android:textColor="@color/black"-->
+    <!--        android:text="@string/search_query"-->
+    <!--        android:drawableStart="@drawable/search"-->
+    <!--        />-->
+
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="20dp"/>
+
+
+
+
+    <ListView
+        android:id="@+id/shedList"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:divider="@color/backgroundGreen"
+        android:dividerHeight="15dp"
+        >
+
+
+    </ListView>
+
+
+
+</LinearLayout>
