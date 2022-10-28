@@ -1,6 +1,6 @@
 package com.example.ead_assignment.model;
 
-public class QueueCounts {
+public class QueueCountsVehicles {
     //creating variables
     private int TotalQueueLength;
     private int Car;
@@ -11,7 +11,7 @@ public class QueueCounts {
     private int Bus;
 
     //constructor
-    public QueueCounts(int totalQueueLength, int car, int motorCycle, int threeWheelers, int van, int lorry, int bus) {
+    public QueueCountsVehicles(int totalQueueLength, int car, int motorCycle, int threeWheelers, int van, int lorry, int bus) {
         TotalQueueLength = totalQueueLength;
         Car = car;
         MotorCycle = motorCycle;

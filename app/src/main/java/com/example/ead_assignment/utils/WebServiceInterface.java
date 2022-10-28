@@ -4,8 +4,11 @@ import com.example.ead_assignment.User;
 import com.example.ead_assignment.model.AvailableFuel;
 import com.example.ead_assignment.model.FuelStation;
 import com.example.ead_assignment.model.LoginModel;
-import com.example.ead_assignment.model.QueueCounts;
+import com.example.ead_assignment.model.Queue;
+import com.example.ead_assignment.model.QueueCountsFuel;
+import com.example.ead_assignment.model.QueueCountsVehicles;
 import com.example.ead_assignment.model.Station;
+import com.example.ead_assignment.model.StationFuelStatus;
 
 import java.util.List;
 
@@ -36,10 +39,36 @@ public interface WebServiceInterface {
     Call<List<AvailableFuel>> getFuelDetails(@Path("shedid") String query);
 
     @GET("queue/count/vehicle/type/{shedid}/")
-    Call<QueueCounts> getQueueCount(@Path("shedid") String query);
+    Call<QueueCountsVehicles> getQueueCount(@Path("shedid") String query);
 
     @PUT("user/logout/{uid}")
     Call<User> logout(@Path("uid") String userid);
+
+    @POST("fueldetails/post")
+    Call<StationFuelStatus> addFuel(@Body StationFuelStatus stationFuelStatus);
+
+    @GET("fueldetails/perfuel/{shedid}/{fuel}")
+    Call<StationFuelStatus> getFuelDetailsStation(@Path("shedid") String query ,@Path("fuel") String fuel );
+
+    @GET("station/getstation/{ownerid}")
+    Call<Station> getStation(@Path("ownerid") String ownerid );
+
+    @POST("queue/post/")
+    Call<Queue> joinQueue(@Body Queue queue);
+
+    @PUT("queue/departure/time/update/{queueId}")
+    Call<Queue> leaveQueue(@Path("queueId") String queueId);
+
+
+    @PUT("fueldetails/update/{fuelid}")
+    Call<StationFuelStatus> updateFuel(@Path("fuelid") String queueId, @Body StationFuelStatus stationFuelStatus);
+
+    @GET("queue/count/vehicle/type/{stationid}")
+    Call<QueueCountsVehicles> getQueueByVehicle(@Path("stationid") String stationid);
+
+
+    @GET("queue/count/fuel/type/{stationid}")
+    Call<QueueCountsFuel> getQueueByFuel(@Path("stationid") String stationid);
 }
 
 //    @POST("FuelStation/{id}/VehiclesInQueue")

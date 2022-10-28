@@ -20,6 +20,7 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.ead_assignment.model.LoginModel;
+import com.example.ead_assignment.model.Station;
 import com.example.ead_assignment.utils.WebServiceClient;
 import com.example.ead_assignment.utils.WebServiceInterface;
 import com.google.gson.Gson;
@@ -45,6 +46,7 @@ public class Login extends AppCompatActivity {
     private boolean status;
     private  User user =  new User();
     private  User signedUser =  new User();
+    private Station station;
 
     public static  final String SHARED_PREF = "sharedPrefs";
     public static final String UID = "uid";
@@ -134,10 +136,9 @@ public class Login extends AppCompatActivity {
 
 
                     //if user is Owner, redirect to owner dashboard, else redirect to customer hom
-                    if(signedUser.getUserType() == "Owner"){
-                        System.out.println("owner owner");
-                        Intent stationReg = new Intent(Login.this, OwnerHome.class);
-                        startActivity(stationReg);
+                    if(signedUser.getUserType().matches("Owner")){
+                        getStation();
+
                     }
                     else{
                         Intent stationReg = new Intent(Login.this, Home.class);
@@ -164,6 +165,50 @@ public class Login extends AppCompatActivity {
         }
 
 
+
+    }
+
+    public void getStation (){
+
+        SharedPreferences prefs = getSharedPreferences("FUELQ", Context.MODE_PRIVATE);
+
+        WebServiceInterface webService = WebServiceClient.getInstance().getWebService();
+        Call<Station> call = webService.getStation(prefs.getString("uid",""));
+
+        call.enqueue(new Callback<Station>() {
+            @Override
+            public void onResponse(Call<Station> call, Response<Station> response) {
+                Log.d("TAG", "onResponse: " + response.code());
+                assert response.body() != null : "Response Body Empty";
+                station = response.body();
+
+                String stationid = station.getId();
+                String stationName = station.getStationName();
+                String stationLocation = station.getStationLocation();
+
+
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putString("stationId", stationid);
+                editor.putString("stationName", stationName);
+                editor.putString("stationLocation", stationLocation);
+                editor.apply();
+
+                System.out.println(prefs.getString("stationName",""));
+
+                Intent stationReg = new Intent(Login.this, OwnerHome.class);
+                startActivity(stationReg);
+
+                Toast.makeText(getApplicationContext(),"Login Successful", Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onFailure(Call<Station> call, Throwable t) {
+                Log.d("TAG", "onFailure: " + t.getLocalizedMessage());
+
+            }
+
+
+        });
 
     }
 

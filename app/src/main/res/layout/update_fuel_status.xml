@@ -30,7 +30,8 @@
             android:maxLines="1"
             android:text="Dashboard"
             android:textColor="@color/white"
-            android:textSize="30dp" />
+            android:textSize="30dp"
+            android:id="@+id/addUpdateTitle"/>
 
 
         <ImageView
@@ -59,7 +60,8 @@
         android:layout_marginLeft="20dp"
         android:textSize="18dp"
         android:textColor="@color/btnGreen"
-        android:fontFamily="@font/robotobold"/>
+        android:fontFamily="@font/robotobold"
+        android:id="@+id/stationName"/>
 
     <Space
         android:layout_width="1dp"
@@ -72,7 +74,8 @@
         android:layout_marginLeft="20dp"
         android:textSize="18dp"
         android:textColor="@color/btnGreen"
-        android:fontFamily="@font/robotobold"/>
+        android:fontFamily="@font/robotobold"
+        android:id="@+id/fuelType"/>
 
     <Space
         android:layout_width="1dp"
@@ -80,7 +83,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="214dp"
         android:orientation="vertical"
         android:paddingLeft="50dp"
         android:paddingTop="10dp"
@@ -119,7 +122,8 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Available" />
+                    android:text="Available"
+                    android:id="@+id/available"/>
 
                 <Space
                     android:layout_width="10dp"
@@ -128,7 +132,8 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Unavailable" />
+                    android:text="Unavailable"
+                    android:id="@+id/unavailable"/>
             </RadioGroup>
         </LinearLayout>
 
@@ -152,13 +157,14 @@
             <EditText
                 android:layout_width="200dp"
                 android:layout_height="48dp"
+                android:layout_marginLeft="15dp"
                 android:background="@drawable/search_form"
                 android:paddingLeft="15dp"
-                android:layout_marginLeft="15dp"
-                 />
+                android:id="@+id/amount"/>
+
             <Space
-            android:layout_width="1dp"
-            android:layout_height="10dp" />
+                android:layout_width="1dp"
+                android:layout_height="10dp" />
 
         </LinearLayout>
 
@@ -167,20 +173,20 @@
             android:layout_height="20dp" />
 
 
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:background="@drawable/btn_dark"
-            android:fontFamily="@font/robotobold"
-            android:gravity="center"
-            android:text="Update"
-            android:textColor="@color/white"
-
-            />
-
     </LinearLayout>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_dark"
+        android:fontFamily="@font/robotobold"
+        android:gravity="center"
+        android:text="Update"
+        android:textColor="@color/white"
+        android:id="@+id/addUpdateBtn"
+
+        />
 
 
 </LinearLayout>

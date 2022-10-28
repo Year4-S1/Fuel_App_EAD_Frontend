@@ -3,6 +3,7 @@ package com.example.ead_assignment.model;
 public class Queue {
 
     //creating variables
+    private String Id;
     private String CustomerId;
     private String StationId;
     private String VehicleType;
@@ -12,13 +13,22 @@ public class Queue {
 
     //constructor
     public Queue(String customerId, String stationId, String vehicleType, String fuelType, String status) {
+
         CustomerId = customerId;
         StationId = stationId;
         VehicleType = vehicleType;
         FuelType = fuelType;
         Status = status;
+
     }
 
+    public String getId() {
+        return Id;
+    }
+
+    public void setId(String id) {
+        Id = id;
+    }
 
     //getter and setter methods
     public String getCustomerId() {

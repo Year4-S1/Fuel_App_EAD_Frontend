@@ -3,12 +3,14 @@ package com.example.ead_assignment.model;
 public class MoreStationInfo
 {
     //creating variables
+    private String Id;
     private  String name;
     private String address;
     private String availFuel;
 
     //constructor
-    public MoreStationInfo(String name, String address, String availFuel) {
+    public MoreStationInfo(String id,String name, String address, String availFuel) {
+        this.Id = id;
         this.name = name;
         this.address = address;
         this.availFuel = availFuel;

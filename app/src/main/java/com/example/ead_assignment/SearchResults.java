@@ -12,14 +12,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
-import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.ead_assignment.model.AvailableFuel;
-import com.example.ead_assignment.model.FuelStation;
 import com.example.ead_assignment.model.MoreStationInfo;
-import com.example.ead_assignment.model.QueueCounts;
+import com.example.ead_assignment.model.QueueCountsVehicles;
 import com.example.ead_assignment.utils.WebServiceClient;
 import com.example.ead_assignment.utils.WebServiceInterface;
 import com.google.gson.Gson;
@@ -54,7 +51,7 @@ public class SearchResults extends AppCompatActivity {
 
     private List<AvailableFuel> availableFuel;
 
-    private QueueCounts queueCounts;
+    private QueueCountsVehicles queueCountsVehicles;
 
     private List<String> fuelList;
 
@@ -119,6 +116,7 @@ public class SearchResults extends AppCompatActivity {
             view = getLayoutInflater().inflate(R.layout.shed_card,viewGroup, false);
             TextView shedName = view.findViewById(R.id.shedName);
             TextView location = view.findViewById(R.id.location);
+            TextView stid = view.findViewById(R.id.stId);
             shedcard = view.findViewById(R.id.moreInfo);
 
 
@@ -133,16 +131,26 @@ public class SearchResults extends AppCompatActivity {
             try {
                 shedName.setText(ii.getString("StationName"));
                 location.setText(ii.getString("StationLocation"));
+                stid.setText((ii.getString("Id")));
             } catch (JSONException e) {
                 e.printStackTrace();
             }
+
 
 
             shedcard.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
 
-                    moreInfo();
+
+//                    try {
+//                        System.out.println(ii.getString("Id"));
+//                    } catch (JSONException e) {
+//                        e.printStackTrace();
+//                    }
+
+
+                    moreInfo(shedName.getText().toString(), location.getText().toString(), stid.getText().toString());
 
                 }
             });
@@ -157,7 +165,9 @@ public class SearchResults extends AppCompatActivity {
     }
 
 
-    public void moreInfo(){
+    public void moreInfo(String shedName, String location, String stId){
+
+//        System.out.println(shedName + location + stId);
 
         SharedPreferences sharedPreferences =  getSharedPreferences("FUELQ", Context.MODE_PRIVATE);
 
@@ -181,13 +191,7 @@ public class SearchResults extends AppCompatActivity {
 
                 fuelListStr = String.join(", ", fuelList);
 
-                try {
-                    moreStationInfo = new MoreStationInfo(ii.getString("StationName"),ii.getString("StationLocation"),fuelListStr);
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-
-                System.out.println(moreStationInfo.getAddress());
+                moreStationInfo = new MoreStationInfo(stId, shedName, location, fuelListStr);
 
                 Gson gson = new Gson();
                  value = gson.toJson(moreStationInfo);
@@ -208,23 +212,24 @@ public class SearchResults extends AppCompatActivity {
 
 
         WebServiceInterface webService1 = WebServiceClient.getInstance().getWebService();
-        Call<QueueCounts> call1 = webService.getQueueCount(id);
+        Call<QueueCountsVehicles> call1 = webService.getQueueCount(id);
 
-        call1.enqueue(new Callback<QueueCounts>() {
+        call1.enqueue(new Callback<QueueCountsVehicles>() {
             @Override
-            public void onResponse(Call<QueueCounts> call, Response<QueueCounts> response) {
+            public void onResponse(Call<QueueCountsVehicles> call, Response<QueueCountsVehicles> response) {
                 Log.d("TAG", "onResponse: " + response.code());
                 assert response.body() != null : "Response Body Empty";
-                queueCounts = response.body();
+                queueCountsVehicles = response.body();
 
                 Log.e("res",response.toString());
 
 
 
 
+
                 Intent stationInfo = new Intent(SearchResults.this, StationInfo.class);
                 Gson gson = new Gson();
-                String count = gson.toJson(queueCounts);
+                String count = gson.toJson(queueCountsVehicles);
 
                 stationInfo.putExtra("moreStationInfo", value);
                 stationInfo.putExtra("count", count);
@@ -245,7 +250,7 @@ public class SearchResults extends AppCompatActivity {
 
 
             @Override
-            public void onFailure(Call<QueueCounts> call, Throwable t) {
+            public void onFailure(Call<QueueCountsVehicles> call, Throwable t) {
                 Log.d("TAG", "onFailure: " + t.getLocalizedMessage());
 
             }

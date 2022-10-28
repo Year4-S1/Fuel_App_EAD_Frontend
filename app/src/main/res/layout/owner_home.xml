@@ -59,7 +59,8 @@
         android:layout_marginLeft="20dp"
         android:textSize="18dp"
         android:textColor="@color/btnGreen"
-        android:fontFamily="@font/robotobold"/>
+        android:fontFamily="@font/robotobold"
+        android:id="@+id/stationName"/>
 
     <Space
         android:layout_width="1dp"
@@ -95,7 +96,8 @@
             android:fontFamily="@font/robotomedium"
             android:gravity="center"
             android:padding="20dp"
-            android:elevation="5dp"/>
+            android:elevation="5dp"
+            android:id="@+id/petrol95btn"/>
 
     </LinearLayout>
 
@@ -119,7 +121,8 @@
             android:fontFamily="@font/robotomedium"
             android:gravity="center"
             android:padding="20dp"
-            android:elevation="5dp"/>
+            android:elevation="5dp"
+            android:id="@+id/deiselBtn"/>
 
         <TextView
             android:layout_width="125dp"
@@ -132,7 +135,8 @@
             android:padding="20dp"
             android:text="Super Diesel"
             android:textColor="@color/white"
-            android:textSize="15dp" />
+            android:textSize="15dp"
+            android:id="@+id/superdeiselBtn"/>
 
     </LinearLayout>
 
@@ -150,6 +154,7 @@
         android:padding="20dp"
         android:text="Queue Information"
         android:textColor="@color/white"
-        android:textSize="15dp" />
+        android:textSize="15dp"
+        android:id="@+id/queueInfo"/>
 
 </LinearLayout>

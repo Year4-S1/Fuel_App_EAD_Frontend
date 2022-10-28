@@ -125,7 +125,7 @@ public class RegisterStation extends AppCompatActivity {
     public void signupStation(String id){
 
 
-        Station station = new Station(id,name,loc);
+        Station station = new Station(null,id,name,loc);
 
         WebServiceInterface webService = WebServiceClient.getInstance().getWebService();
         Call<Station> call = webService.signupStation(station);

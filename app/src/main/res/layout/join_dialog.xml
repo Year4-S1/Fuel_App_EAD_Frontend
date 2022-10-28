@@ -43,7 +43,7 @@
         <RadioGroup
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:id="@+id/petroltypes"
+            android:id="@+id/petroltypesdialog"
             android:orientation="horizontal"
 
             >
@@ -54,15 +54,16 @@
                 android:layout_height="wrap_content"
                 android:text="Petrol 92 Octane"
                 android:checked="true"
-                android:onClick="clearDeisel"
+                android:onClick="clearFuel2"
                 android:fontFamily="@font/robotoregular"
-                android:textSize="13dp"/>
+                android:textSize="13dp"
+                />
             <RadioButton
                 android:id="@+id/p95"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Petrol 95 Octane"
-                android:onClick="clearDeisel"
+                android:onClick="clearFuel2"
                 android:fontFamily="@font/robotoregular"
                 android:textSize="13dp"/>/>
 
@@ -70,7 +71,7 @@
         <RadioGroup
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:id="@+id/dieselTypes"
+            android:id="@+id/dieselTypesdialog"
             android:orientation="horizontal"
             >
             <RadioButton
@@ -78,7 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Diesel"
-                android:onClick="clearPetrol"
+                android:onClick="clearFuel1"
                 android:fontFamily="@font/robotoregular"
                 android:textSize="13dp"/>
 
@@ -91,7 +92,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Super Diesel"
-                android:onClick="clearPetrol"
+                android:onClick="clearFuel1"
                 android:fontFamily="@font/robotoregular"
                 android:textSize="13dp"
                 />
@@ -130,7 +131,7 @@
                 android:layout_height="wrap_content"
                 android:text="Car"
                 android:checked="true"
-                android:onClick="clearDeisel"
+                android:onClick="clearVehicles2"
                 android:fontFamily="@font/robotoregular"
                 android:textSize="13dp"
                 android:id="@+id/car"/>
@@ -142,7 +143,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Motor cycle"
-                android:onClick="clearDeisel"
+                android:onClick="clearVehicles2"
                 android:fontFamily="@font/robotoregular"
                 android:textSize="13dp"/>
             <Space
@@ -153,7 +154,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Three-wheelers"
-                android:onClick="clearDeisel"
+                android:onClick="clearVehicles2"
                 android:fontFamily="@font/robotoregular"
                 android:textSize="13dp"/>
 
@@ -170,7 +171,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Van"
-                android:onClick="clearPetrol"
+                android:onClick="clearVehicles1"
                 android:fontFamily="@font/robotoregular"
                 android:textSize="13dp"/>
             <Space
@@ -183,7 +184,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Lorry"
-                android:onClick="clearPetrol"
+                android:onClick="clearVehicles1"
                 android:fontFamily="@font/robotoregular"
                 android:textSize="13dp"
                 />
@@ -195,7 +196,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Bus"
-                android:onClick="clearPetrol"
+                android:onClick="clearVehicles1"
                 android:fontFamily="@font/robotoregular"
                 android:textSize="13dp"
                 />
@@ -207,7 +208,7 @@
         android:layout_height="20dp"/>
 
     <TextView
-        android:id="@+id/joinQueueBtn"
+        android:id="@+id/joinleaveBtn"
         android:layout_width="158dp"
         android:layout_height="56dp"
         android:background="@drawable/btn_dark"
@@ -216,7 +217,25 @@
         android:layout_gravity="center"
         android:fontFamily="@font/robotobold"
         android:textColor="@color/white"
-        android:textSize="20dp"/>
+        android:textSize="20dp"
+        />
+
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="10dp"/>
+    <TextView
+        android:id="@+id/canceljoin"
+        android:layout_width="158dp"
+        android:layout_height="56dp"
+        android:background="@drawable/btn_light"
+        android:text="Cancel"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:fontFamily="@font/robotobold"
+        android:textColor="@color/lightblack"
+        android:textSize="20dp"
+        />
+
 
 
 

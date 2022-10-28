@@ -175,7 +175,8 @@
             android:fontFamily="@font/robotomedium"
             android:text="@string/stationName"
             android:textColor="@color/black"
-            android:textSize="24dp" />
+            android:textSize="24dp"
+            android:id="@+id/stationName"/>
 
         <Space
             android:layout_width="1dp"
@@ -199,6 +200,7 @@
                     android:text="Malabe, Sri Lanka"
                     android:fontFamily="@font/robotobold"
                     android:textColor="@color/black"
+                    android:id="@+id/address"
                     />
             </LinearLayout>
 
@@ -220,6 +222,7 @@
                 android:text="Petrol 92 Octane, Deisel, Super Deisel"
                 android:fontFamily="@font/robotoregular"
                 android:textColor="@color/black"
+                android:id="@+id/types"
                 />
 
             <Space
@@ -257,6 +260,7 @@
                         android:text="25 Vehicles"
                         android:fontFamily="@font/robotoregular"
                         android:textColor="@color/black"
+                        android:id="@+id/total"
                         />
                 </LinearLayout>
 
@@ -329,7 +333,7 @@
         android:layout_width="158dp"
         android:layout_height="56dp"
         android:background="@drawable/btn_dark"
-        android:text="Leave Queue"
+        android:text="Join Queue"
         android:gravity="center"
         android:fontFamily="@font/robotobold"
         android:textColor="@color/white"

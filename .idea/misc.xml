@@ -29,15 +29,17 @@
         <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/login1.xml" value="0.1" />
         <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/logout.xml" value="0.27291666666666664" />
         <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/owner_home.xml" value="0.25925925925925924" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/queue_info.xml" value="0.22" />
         <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/register_station.xml" value="0.1474164133738602" />
         <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/search_results.xml" value="0.1" />
         <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/selected_fuel.xml" value="0.25" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/selected_fuel_empty.xml" value="0.33" />
         <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/shed_card.xml" value="0.22" />
         <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/shed_card1.xml" value="0.33" />
         <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/signup.xml" value="0.1" />
         <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/signup1.xml" value="0.1" />
-        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/station_info.xml" value="0.1" />
-        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/station_info1.xml" value="0.67" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/station_info.xml" value="0.25" />
+        <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/station_info1.xml" value="0.1" />
         <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/style_elements.xml" value="0.38697916666666665" />
         <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/layout/update_fuel_status.xml" value="0.209375" />
         <entry key="..\:/Mithma/SLIIT/Y4S2/EAD/Assingment/app/src/main/res/xml/network_security_config.xml" value="0.13229166666666667" />
